@@ -1,0 +1,45 @@
+:root {
+  color-scheme: light;
+  --paper: #f9f5ec;
+  --ink: #242c25;
+  --muted: #4d5a50;
+  --green: #174f3b;
+  --line: #cbd0bd;
+  --card: #fffdf7;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem/1.75 "Inter", "Microsoft JhengHei", sans-serif;
+}
+a { color: var(--green); }
+a:focus-visible { outline: 3px solid #8e461e; outline-offset: 5px; }
+.top, main, footer { width: min(100% - 2.5rem, 64rem); margin-inline: auto; }
+.top { padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
+.top a { font-weight: 750; text-decoration: none; }
+.hero { padding: clamp(2rem, 8vw, 6rem) 0 3rem; }
+h1, h2, p { margin: 0; }
+h1 { font-size: clamp(2.25rem, 7vw, 5.15rem); line-height: 1.15; letter-spacing: -.04em; }
+h2 { font-size: 1.35rem; }
+.hero p, .summary { margin-top: 1rem; color: var(--muted); max-width: 35rem; }
+.button { display: inline-block; margin-top: 1.5rem; padding: .6rem 1rem; background: var(--green); color: white; border-radius: .35rem; text-decoration: none; }
+#notes { border-top: 1px solid var(--line); padding-top: 1.2rem; }
+.card-grid { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.card { display: flex; flex-direction: column; gap: .45rem; height: 100%; padding: 1.3rem; border: 1px solid var(--line); border-radius: .6rem; background: var(--card); text-decoration: none; color: var(--ink); }
+.card:hover { border-color: var(--green); }
+.card strong { font-size: 1.4rem; }
+.category, .read { color: var(--green); font-weight: 700; font-size: .9rem; }
+.read { margin-top: auto; padding-top: .6rem; }
+.note { max-width: 44rem; padding-top: 1.5rem; }
+.back { display: inline-block; }
+.note-intro { margin: 2rem 0; padding-bottom: 1.5rem; border-bottom: 1px solid var(--line); }
+.note h1 { margin-top: .3rem; }
+.note section { margin-top: 1.5rem; }
+.note section p, .note ol { margin-top: .35rem; }
+.note ol { padding-left: 1.5rem; }
+.note li + li { margin-top: .3rem; }
+.practice { padding: 1rem 1.2rem; background: #e8eee2; border-left: .25rem solid var(--green); }
+footer { border-top: 1px solid var(--line); margin-top: 3rem; padding: 1rem 0 1.5rem; color: var(--muted); font-size: .85rem; }
+@media (max-width: 36rem) { .card-grid { grid-template-columns: 1fr; } }
